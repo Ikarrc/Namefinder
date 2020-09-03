@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    tools:context="ikarr.pang.controller.MainActivity">
+
+    <ImageView
+        android:id="@+id/activity_names_logo_img"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:gravity="center"
+        android:src="@drawable/pf2logo"
+        android:contentDescription="@string/pf2logo_alt"/>
+
+    <Spinner
+        android:id="@+id/activity_names_filter_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:background="@null"/>
+
+    <ListView
+        android:id="@+id/activity_names_characters_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="false"
+        android:gravity="center" />
+
+</LinearLayout>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Pathfinder Name Generator</string>
+    <string name="pf2logo_alt">Pathfinder Name Generator</string>
+    <string name="male_logo_alt">Male</string>
+    <string name="female_logo_alt">Female</string>
+    <string name="genderless_logo_alt">Genderless</string>
+    <string name="lockopen_alt">Open</string>
+    <string name="first_name">FirstName</string>
+    <string name="last_name">LastName</string>
+    <string name="lockclose_alt">Close</string>
+    <string name="seelist_alt">Go to names list</string>
+    <string name="dice_alt">randomise</string>
+    <string name="record_alt">save this name</string>
+    <string name = "example_name">Example name</string>
+
+
+
+</resources>

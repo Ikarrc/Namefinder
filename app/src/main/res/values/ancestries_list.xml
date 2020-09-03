@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ancestries_list">
+        <item>Dwarf</item>
+        <item>Elf</item>
+        <item>Gnome</item>
+        <item>Gobelin</item>
+        <item>Halfling</item>
+        <item>Hobgoblin</item>
+        <item>Human</item>
+        <item>Leshee</item>
+        <item>Lizardfolk</item>
+        <item>Orc</item>
+    </string-array>
+
+    <string-array name="dwarfs_male_firstNames">
+        <item>Agna</item>
+        <item>Bodill</item>
+        <item>Dolgrin</item>
+        <item>Edrukk</item>
+        <item>Grunyar</item>
+        <item>Ingra</item>
+        <item>Kazmuk</item>
+        <item>Kotri</item>
+        <item>Lupp</item>
+        <item>Morgrym</item>
+        <item>Rogar</item>
+        <item>Rusilka</item>
+        <item>Torra</item>
+        <item>Yangrit</item>
+    </string-array>
+
+    Agna, Bodill, Dolgrin, Edrukk, Grunyar, Ingra, Kazmuk, Kotri, Lupp, Morgrym, Rogar, Rusilka, Torra, Yangrit
+</resources>

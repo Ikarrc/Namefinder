@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    tools:context="ikarr.pang.controller.MainActivity">
+
+    <ImageView
+        android:id="@+id/activity_main_logo_img"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:gravity="center"
+        android:src="@drawable/pf2logo"
+        android:contentDescription="@string/pf2logo_alt"/>
+
+    <Spinner
+        android:id="@+id/activity_main_ancestries_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:background="@null"/>
+
+    <LinearLayout
+        android:id="@+id/activity_main_genders_layout"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageButton
+            android:id="@+id/activity_main_genderless_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/genderless_logo_alt"
+            android:gravity="center"
+            android:src="@drawable/genderless_icon_grey" />
+
+        <ImageButton
+            android:id="@+id/activity_main_female_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/female_logo_alt"
+            android:gravity="center"
+            android:src="@drawable/female_icon_grey" />
+
+        <ImageButton
+            android:id="@+id/activity_main_male_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/male_logo_alt"
+            android:gravity="center"
+            android:src="@drawable/male_icon_grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_main_first_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/activity_main_left_lock_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/lockopen_alt"
+            android:src="@drawable/open_lock_icon"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp" />
+
+        <TextView
+            android:id="@+id/activity_main_first_name_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:gravity="center"
+            android:text="@string/first_name"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_main_last_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/activity_main_last_name_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:gravity="center"
+            android:text="@string/last_name"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/activity_main_right_lock_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/lockclose_alt"
+            android:src="@drawable/open_lock_icon"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_main_dice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/activity_main_list_button"
+            android:layout_width="80dp"
+            android:layout_height="66dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/seelist_alt"
+            android:gravity="center"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/see_list_icon" />
+
+        <ImageView
+            android:id="@+id/activity_main_dice_button"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/dice_alt"
+            android:gravity="center"
+            android:src="@drawable/dice_icon" />
+
+        <ImageView
+            android:id="@+id/activity_main_record_button"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/record_alt"
+            android:gravity="center"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/record_icon" />
+    </LinearLayout>
+
+</LinearLayout>
