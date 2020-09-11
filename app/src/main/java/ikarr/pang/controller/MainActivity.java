@@ -192,8 +192,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         mFirstNameTxt.getText().toString(),
                         mLastNameTxt.getText().toString()
                 );
-                NamesActivity.savePersona(newOne);
-                Toast.makeText(this, newOne.getFirstName() + " " + newOne.getLastName() + " is saved.", Toast.LENGTH_LONG).show();
+                if (NamesActivity.savePersona(newOne)) {
+                    Toast.makeText(this, "SAVING " + newOne.getFirstName() + " "
+                            + newOne.getLastName() + ".", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(this, "ERROR : " + newOne.getFirstName() + " "
+                            + newOne.getLastName() + " is already saved.", Toast.LENGTH_LONG).show();
+                }
                 break;
             default:
                 break;
