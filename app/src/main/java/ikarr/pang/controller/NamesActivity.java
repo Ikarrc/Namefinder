@@ -28,8 +28,16 @@ public class NamesActivity extends AppCompatActivity {
 
     PersonaDbHelper dbHelper = new PersonaDbHelper(this);
 
-    public static void savePersona(Persona npc) {
+    public static boolean savePersona(Persona npc) {
+        Persona current;
+        for (int i = 0; i < savedPersonas.size(); i++ ) {
+            current = savedPersonas.get(i);
+            if (current.equals(npc)) {
+                return false;
+            }
+        }
         savedPersonas.add(npc);
+        return true;
     }
     public static void deletePersona(Persona npc) {
         savedPersonas.remove(npc);

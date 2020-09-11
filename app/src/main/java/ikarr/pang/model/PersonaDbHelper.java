@@ -7,7 +7,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +21,6 @@ public class PersonaDbHelper extends SQLiteOpenHelper {
                     PersonaTable.COLUMN_FIRST_NAME + " TEXT NOT NULL, " +
                     PersonaTable.COLUMN_LAST_NAME + " TEXT NOT NULL" +
                     ")";
-
 
     public static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + PersonaTable.TABLE_NAME;
@@ -46,7 +44,6 @@ public class PersonaDbHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(SQL_DELETE_ENTRIES);
         this.onCreate(db);
-        Log.i ("DATABASE", "onUpgrade invoked"); // Just a log to delete later
     }
 
     @Override

@@ -10,16 +10,31 @@ public class RandomElfName {
     private boolean[] locks = {true, true, true};
 
     private final static String[] femaleFirstNameList = {
-            "Agna", "Bodill", "Ingra", "Kazmuk", "Kotri", "Lupp", "Rusilka", "Torra", "Yangrit"
+            "Aglarond", "Aeluin", "Araval", "Arnor", "Balan", "Bril", "Carnen", "Cinodrel", "Cirdan",
+            "Danbeth", "Dineth", "Elanor", "Elleth", "Elros", "Eryn", "Felagund", "Finglas", "Faunra",
+            "Galadriel", "Gilthoniel", "Glanhir", "Hurin", "Harnen", "Handir", "Iorhael", "Iarwen",
+            "Laegel", "Linaewen", "Minas", "Morben", "Mirin", "Nes", "Niniel", "Panthael", "Ramdal",
+            "Sarnia", "Tessara", "Tyrn", "Uriel", "Variel"
     };
     private final static String[] maleFirstNameList = {
-            "Argnar", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Kazmuk", "Kotri", "Lupp", "Morgrym", "Rogar"
+            "Amon", "Anfalas", "Angmar", "Aradan", "Barthan", "Cair", "Calen", "Celeborn", "Dimbar",
+            "Emyl", "Elwyng", "Erebor", "Elrohir", "Faenor", "Fangorn", "Fingolfin", "Firion", "Galvorn",
+            "Gildor", "Glorfindel", "Gorthol", "Haelevorn", "Haerast", "Huor", "Ithildin", "Legolas",
+            "Laerin", "Mallorn", "Mirion", "Morgai", "Mithrim", "Nevrast", "Nogrod", "Onodio", "Orul",
+            "Pelennor", "Rian", "Rauros", "Sarn", "Turin", "Uldor", "Zirion"
     };
-    private final static String[] allFirstNameList = {
-            "Agna", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Ingra", "Kazmuk", "Kotri", "Lupp", "Morgrym", "Rogar", "Rusilka", "Torra", "Yangrit"
-    };
+
+    private final static String[] allFirstNameList = Persona.mergeArrays(femaleFirstNameList, maleFirstNameList);
+
     private final static String[] lastNameList = {
-            "Aerel", "Amrunelara", "Caladrel", "Dardlara", "Faunra", "Heldalel", "Jathal", "Lanliss", "Oparal", "Seldlon", "Soumral", "Talathel", "Tessara", "Variel", "Yalandlara", "Zordlon"
+            "Adnair", "Aeglos", "Aegnor", "Aerandir", "Aerel", "Agarwaen", "Amunelara", "Baragud",
+            "Barthan", "Borlas", "Bruinen", "Caladrel", "Calben", "Camlost", "Caradhras", "Cuthalion",
+            "Dagnir", "Dagor", "Dardlara", "Duinhir", "Dunedhel", "Edegil", "Egladhrim", "Egnor", "Elfaron",
+            "Finrod", "Forlindon", "Fornost", "Galadrhim", "Glamdring", "Gloredhel", "Harlindon",
+            "Heldalel", "Helluin", "Himladrin", "Imladrin", "Jathal", "Lanliss", "Lomendor", "Lamthanc",
+            "Mablung", "Merethrond", "Mindolluin", "Nardol", "Nivrost", "Oparal", "Osgiliath", "Parthgallen",
+            "Rhudaur", "Rathdinen", "Seldlon", "Soumral", "Sirannon", "Talathel", "Thingol", "Ulfast",
+            "Xanast", "Yalandlara", "Zordlon"
     };
 
     public static String[] getAllFirstNameList() {
@@ -35,26 +50,26 @@ public class RandomElfName {
         return lastNameList;
     }
 
-    public RandomElfName(Persona name) {
-        name.setFirstName(name.getFirstName());
-        name.setLastName(name.getLastName());
+    public RandomElfName(Persona persona) {
+        persona.setFirstName(persona.getFirstName());
+        persona.setLastName(persona.getLastName());
         if (MainActivity.firstNameLock.isOpen()) {
-            switch(name.getGender()) {
+            switch(persona.getGender()) {
                 case GENDERLESS:
-                    name.setFirstName(Persona.randomFromArray(getAllFirstNameList()));
+                    persona.setFirstName(Persona.randomFromArray(getAllFirstNameList()));
                     break;
                 case FEMALE:
-                    name.setFirstName(Persona.randomFromArray(getFemaleFirstNameList()));
+                    persona.setFirstName(Persona.randomFromArray(getFemaleFirstNameList()));
                     break;
                 case MALE:
-                    name.setFirstName(Persona.randomFromArray(getMaleFirstNameList()));
+                    persona.setFirstName(Persona.randomFromArray(getMaleFirstNameList()));
                     break;
                 default:
                     break;
             }
         }
         if (MainActivity.lastNameLock.isOpen()) {
-            name.setLastName(Persona.randomFromArray(getLastNameList()));
+            persona.setLastName(Persona.randomFromArray(getLastNameList()));
         }
     }
 }

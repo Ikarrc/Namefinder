@@ -1,8 +1,8 @@
 package ikarr.pang.model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 public class Persona {
     protected int gender;
@@ -21,10 +21,23 @@ public class Persona {
     public static String[] getAncestriesList() {
         return ancestriesList;
     }
+
     public static String randomFromArray(String[] list) {
         int rand = (int) (Math.random() * (list.length));
         return list[rand];
     }
+
+    public static String[] mergeArrays(String[] arrayOne, String[] arrayTwo) {
+        List<String> listOne = Arrays.asList(arrayOne);
+        List<String> listTwo = Arrays.asList(arrayTwo);
+        List<String> mergedList = new ArrayList<>(listTwo);
+        mergedList.removeAll(listOne);
+        mergedList.addAll(listOne);
+        String [] mergedArray = new String[mergedList.size()];
+        mergedArray = mergedList.toArray(mergedArray);
+        return mergedArray;
+    }
+
     public static String randomAncestry() {
         return randomFromArray(ancestriesList);
     }

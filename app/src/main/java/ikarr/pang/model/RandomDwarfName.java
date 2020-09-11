@@ -8,16 +8,31 @@ public class RandomDwarfName {
     private final static int MALE = 2;
 
     private final static String[] femaleFirstNameList = {
-            "Agna", "Bodill", "Ingra", "Kazmuk", "Kotri", "Lupp", "Rusilka", "Torra", "Yangrit"
+            "Agna", "Astri", "Bari", "Beli", "Bodill", "Druria", "Dori", "Dwina", "Elli", "Etri",
+            "Farrondi", "Grukka", "Hadria", "Hera", "Haki", "Heid", "Iari", "Idi", "Ingra", "Kazmuk",
+            "Kotri", "Ketria", "Lupp", "Moin", "Nali", "Nalria", "Rusilka", "Torra", "Yangrit"
     };
     private final static String[] maleFirstNameList = {
-            "Argnar", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Kazmuk", "Kotri", "Lupp", "Morgrym", "Rogar"
+            "Anar", "Andvar",  "Balin", "Bifur", "Bildur", "Bilin", "Blain", "Bogi", "Bofur",
+            "Bombur", "Borin", "Bor", "Bori", "Bragi", "Brimir", "Bruni", "Bur", "Buri", "Burin", "Dagir",
+            "Dain", "Dufur", "Durin", "Durni", "Dwalin", "Falar", "Farin", "Fili", "Finar", "Floi",
+            "Forgun", "Frar", "Frer", "Frerin", "Fundin", "Galar", "Gilin","Gimli",
+            "Ginar", "Gladur", "Gloin", "Grani", "Groin", "Gror","Gumir", "Hepti",
+            "Himur", "Hodur", "Honir", "Hornbor", "Ilmir", "Kili", "Kona", "Litir", "Lodun", "Lodur",
+            "Lofar", "Lofi", "Lofun", "Logi", "Loni","Mani", "Maro", "Narg", "Narvi", "Nidi", "Nipin",
+            "Niping","Nodi", "Nodri", "Noi", "Nori", "Nyrad", "Oin", "Onar", "Ori","Otur", "Pori",
+            "Regin", "Sigun", "Sindri", "Skadi", "Skirfir", "Sudri", "Sumar", "Thegur", "Thorin",
+            "Thrain", "Thror", "Thrumir", "Vali", "Vani", "Vedir", "Veig", "Vestri", "Vidar", "Vili",
+            "Vimur", "Virfir", "Vitir", "Ymir", "Yngvi", "Argnar", "Bodill", "Bofin", "Dolgrin", "Drukon",
+            "Edrukk", "Fargin", "Grunyar", "Kazmuk", "Kili", "Kotri", "Lupp", "Morgrym", "Nalbr",
+            "Ovak", "Ragzad", "", "Simond", "Thorrin"
     };
-    private final static String[] allFirstNameList = {
-            "Agna", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Ingra", "Kazmuk", "Kotri", "Lupp", "Morgrym", "Rogar", "Rusilka", "Torra", "Yangrit"
-    };
+
+    private final static String[] allFirstNameList = Persona.mergeArrays(femaleFirstNameList, maleFirstNameList);
+
     private final static String[] lastNameList = {
-            "Agna", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Ingra", "Kazmuk", "Kotri", "Lupp", "Morgrym", "Rogar", "Rusilka", "Torra", "Yangrit"
+            "Bolragnir", "Gildaymin", "Rundalnim", "Frorvarrak", "Rogarnor", "Griturdong", "Hanargrilin"
+
     };
 
     public static String[] getAllFirstNameList() {

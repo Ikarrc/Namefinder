@@ -14,10 +14,12 @@ public class RandomHalflingName {
             "Argnar", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Kazmuk", "Kotri", "Lupp", "Morgrym", "Rogar"
     };
     private final static String[] allFirstNameList = {
-            "Agna", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Ingra", "Kazmuk", "Kotri", "Lupp", "Morgrym", "Rogar", "Rusilka", "Torra", "Yangrit"
+            "Agna", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Ingra", "Kazmuk", "Kotri", "Lupp",
+            "Morgrym", "Rogar", "Rusilka", "Torra", "Yangrit"
     };
     private final static String[] lastNameList = {
-            "Agna", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Ingra", "Kazmuk", "Kotri", "Lupp", "Morgrym", "Rogar", "Rusilka", "Torra", "Yangrit"
+            "Agna", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Ingra", "Kazmuk", "Kotri", "Lupp",
+            "Morgrym", "Rogar", "Rusilka", "Torra", "Yangrit"
     };
 
     public static String[] getAllFirstNameList() {

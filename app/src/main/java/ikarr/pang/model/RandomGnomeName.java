@@ -15,30 +15,17 @@ public class RandomGnomeName {
     public static final String LAST_NAMES_FILE = "gnomesLastNames.txt";
 
     private final static String[] femaleFirstNameList = {
-            "Adan (little fire)", "Adva (Small wave)", "Aiko (Little Love)", "Aithne (Little fire)",
-            "Allison (little truthful)", "Amorette (little love)", "Armida (little armed one)",
-            "Belita (Little Beauty)",
-            "Bonita", "Brenna", "Brooke", "Carlin",
-            "Charlene", "Darra", "Demi", "Jenna",
-            "Kiara", "Kierna", "Koemi", "Maleah",
-            "Miette", "Miki", "Nina",
-            "Piera", "Posy", "Rosine", "Rowan (Little red head)", "Shanna (Small and Wise)"
-             /*
-             - Pretty little one (spanish) - Little Tears (Irish) - Small stream -little champion (Gaelic)
-             - Little Beauty (French) - Small great one (Gaelic) - half, small (french) - little bird (Arabic)
-             - small (Celtic) - little dark haired one (Irish) - little smile (Japanese)
-             - Unique little girl (Hawaiian) -Small Sweet thing (spanish) - small (Inupiaq)
-             - Little girl (spanish) - Small rock (Italian) - Small flower (English) - Little Rose (Latin)
-            - Solita - Little Loner (Spanish) - Tulla - A little hill (Irish) - Viveca -little woman (Scandinavian)
-            - Zita - little girl (Italian) */
+            "Adan", "Adva", "Aiko", "Aithne", "Allison", "Amorette", "Armida", "Belita", "Bonita",
+            "Brenna", "Brooke", "Carlin", "Charlene", "Darra", "Demi", "Jenna", "Kiara", "Kierna",
+            "Koemi", "Maleah", "Miette", "Miki", "Nina", "Piera", "Posy", "Rosine", "Rowan", "Shanna",
+            "Solita,", "Tulla", "Viveca", "Zita"
     };
     private final static String[] maleFirstNameList = {
-            "Yves (little archer)", "Tawnie (Little One)", "Teagan (Little Poet)",
-            "Whitley (Small field)", "Dolgrin", "Edrukk", "Grunyar", "Kazmuk", "Kotri", "Lupp", "Morgrym", "Rogar"
+            "Yves", "Tawnie", "Teagan", "Whitley"
     };
-    private final static String[] allFirstNameList = {
-            "Agna", "Bodill", "Dolgrin", "Edrukk", "Grunyar", "Ingra", "Kazmuk", "Kotri", "Lupp", "Morgrym", "Rogar", "Rusilka", "Torra", "Yangrit"
-    };
+
+    private final static String[] allFirstNameList = Persona.mergeArrays(femaleFirstNameList, maleFirstNameList);
+
     private final static String[] lastNameList = {
             "Toto"
     };
@@ -81,7 +68,7 @@ public class RandomGnomeName {
         BufferedReader br = new BufferedReader(new FileReader(fileName));
         ArrayList<String> myList = new ArrayList<>();
         String line;
-        while((line = br.readLine()) != null) {
+        while ((line = br.readLine()) != null) {
             myList.add(line);
         }
         br.close();
